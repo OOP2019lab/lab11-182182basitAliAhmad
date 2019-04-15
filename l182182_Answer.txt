@@ -1,0 +1,19 @@
+Exercise 6a: Age is a protected attribute because we want it to be accessible from all of the derived class of the Person class. First Name and Last Name are private attributes and are hidden in derived classes. We need getters and setters to access those private attributes but age does not require any getter or setter in derived classes but we need those in main function or anywhere outside the class.
+
+Exercise 6b: Writing firstName and lastName directly in the Student class showed following errors:
+1) Error	C2248	'Person::firstName': cannot access private member declared in class 'Person'	Lab11	c:\users\temp.domain\desktop\lab11\lab11\l182182_studentimp.cpp	34
+
+Error	C2248	'Person::firstName': cannot access private member declared in class 'Person'	Lab11	c:\users\temp.domain\desktop\lab11\lab11\l182182_studentimp.cpp	34
+
+2) Error (active) member "Person::lastName" (declared at line 10 of "c:\Users\TEMP.DOMAIN\Desktop\Lab11\Lab11\l182182_Person.h") is inaccessible	Lab11	c:\Users\TEMP.DOMAIN\Desktop\Lab11\Lab11\l182182_StudentImp.cpp	34
+
+
+Error	C2248	'Person::lastName': cannot access private member declared in class 'Person'	Lab11	c:\users\temp.domain\desktop\lab11\lab11\l182182_studentimp.cpp	34
+
+
+
+Exercise 6c: We got this error because firstName and lastName are private members and private members are hidden in derived class. We have to use getters to access their values or we can use a public member method to print the information of person like this->printInformation();
+
+Exercise 8: Changing inheritance type to protected did not show significant changes as it only affects the public attributes of base class but our base class has no public members except for constructors. Just those constructors are inherited as protected but as we know protected element are accessible to derived class.
+
+Exercise 9: Changing inheritance type to private also did not affect the working of program but the members of base class became private in the derived class and are inaccessible outside the class like main function or any other class independant of Person class.
